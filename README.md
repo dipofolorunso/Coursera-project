@@ -121,24 +121,3 @@ accuracy
 The accuracy of the prediction is 99.24%. Hence, the *out-of-sample error* is 0.76%.
 
 
-### Variable importance
-
-The five most important variables in the model and their relative importance values are:
-
-
-```r
-Imp <- varImp(modFit)$importance
-Imp[head(order(unlist(vi), decreasing = TRUE), 5L), , drop = FALSE]
-```
-
-```
-##                     Overall
-## roll_belt         100.00000
-## pitch_forearm      60.51577
-## yaw_belt           51.70924
-## magnet_dumbbell_y  46.05269
-## magnet_dumbbell_z  44.17784
-```
-
-***************************************************************************
-
